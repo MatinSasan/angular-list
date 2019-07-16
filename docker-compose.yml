@@ -1,0 +1,6 @@
+version: '3'
+services:
+  ng-app:
+    build: .
+    ports:
+      - '4200:4200'

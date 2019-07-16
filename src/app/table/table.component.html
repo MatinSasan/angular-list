@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+    <div class="col-8 col-sm-8 col-lg-8">
+      <h6 class="text-muted">Staff Members</h6>
+      <div class="list-group">
+        <a
+          href="#"
+          (click)="removeEl(i)"
+          style="height: 60px"
+          *ngFor="let person of persons; let i = index"
+          class="list-group-item d-flex justify-content-between align-items-center"
+        >
+          <span class="text-muted small">Id: </span>{{ person.id }}
+          <span class="text-muted small">Name: </span>
+          {{ person.name }}
+          <span class="text-muted small">Age: </span>
+          {{ person.age }}
+          <span class="text-muted small">Position: </span>
+          {{ person.position }}
+          <span class="text-muted small">Since: </span>
+          {{ person.year }}
+
+          <img
+            [src]="person.avatar"
+            alt="{{ person.name }}}"
+            class="d-block pull-right img-fluid"
+            style="max-height: 40px;"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+      <h6 class="text-muted">Staff Members</h6>
+      <a
+        href="#"
+        class="list-group-item clearfix"
+        *ngFor="let person of persons"
+      >
+        <div class="pull-left">
+          <h4 class="list-group-item-heading">
+            Id: {{ person.id }} Name: {{ person.name }}
+          </h4>
+          <p class="list-group-item-text">
+            {{ person.age }} {{ person.position }} {{ person.year }}
+          </p>
+          <span class="pull-right">
+            <img
+              [src]="person.avatar"
+              alt="{{ person.name }}}"
+              class="img-responsive"
+              style="max-width: 45px;"
+            />
+          </span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div> -->
