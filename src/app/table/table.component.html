@@ -8,6 +8,7 @@
           (click)="removeEl(i)"
           style="height: 60px"
           *ngFor="let person of persons; let i = index"
+          [@list1]
           class="list-group-item d-flex justify-content-between align-items-center"
         >
           <span class="text-muted small">Id: </span>{{ person.id }}
