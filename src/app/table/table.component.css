@@ -4,3 +4,7 @@ body {
 .image-parent {
   max-width: 40px;
 }
+
+span {
+  margin: 0 8px;
+}

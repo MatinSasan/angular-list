@@ -29,7 +29,7 @@ export class Person {
 //   name: string;
 //   age: number;
 //   position: string;
-//   year: string;
+//   year: number;
 // }
 
 // export const units: Persons[] = [
