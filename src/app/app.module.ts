@@ -11,7 +11,8 @@ import {
   MatDialogModule,
   MatButtonModule,
   MatToolbarModule,
-  MatTableModule
+  MatTableModule,
+  MatCardModule
 } from '@angular/material';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HeaderComponent } from './header/header.component';
@@ -36,11 +37,13 @@ import { MatSortModule } from '@angular/material/sort';
     MatButtonModule,
     MatToolbarModule,
     MatTableModule,
+    MatCardModule,
     // routing
     AppRoutingModule,
     MatPaginatorModule,
     MatSortModule
   ],
+  entryComponents: [ListComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

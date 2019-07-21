@@ -3,6 +3,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
 import { ExtraDataSource, ExtraItem } from './extra-datasource';
+import { MatDialog } from '@angular/material';
+import { ListComponent } from '../list/list.component';
 
 @Component({
   selector: 'app-extra',
@@ -17,6 +19,22 @@ export class ExtraComponent implements AfterViewInit, OnInit {
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['id', 'name', 'avatar', 'position', 'year'];
+
+  constructor(private dialog: MatDialog) {}
+
+  // my custom function
+  showDialog(row) {
+    console.log(row);
+    this.dialog.open(ListComponent, {
+      data: {
+        Id: row.id,
+        Avatar: row.avatar,
+        Name: row.name,
+        Position: row.position,
+        Year: row.year
+      }
+    });
+  }
 
   ngOnInit() {
     this.dataSource = new ExtraDataSource();

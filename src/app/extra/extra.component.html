@@ -11,7 +11,13 @@
     </div>
 
     <div class="mat-elevation-z8">
-      <table mat-table class="full-width-table" matSort aria-label="Elements">
+      <table
+        mat-table
+        class="full-width-table"
+        matSort
+        aria-label="Elements"
+        style="font-weight: bold"
+      >
         <!-- Id Column -->
         <ng-container matColumnDef="id">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
@@ -47,7 +53,12 @@
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        <tr
+          mat-row
+          (click)="showDialog(row)"
+          style="cursor: pointer;"
+          *matRowDef="let row; columns: displayedColumns"
+        ></tr>
       </table>
 
       <mat-paginator
